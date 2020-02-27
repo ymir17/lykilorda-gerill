@@ -1,0 +1,23 @@
+{
+  "name": "lykilordagerill",
+  "version": "1.0.0",
+  "description": "Icelandic Password Generator",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymir17/lykilorda-gerill.git"
+  },
+  "author": "Ymir P Gislason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ymir17/lykilorda-gerill/issues"
+  },
+  "homepage": "https://github.com/ymir17/lykilorda-gerill#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
