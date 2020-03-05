@@ -2,15 +2,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LykilorðaGerillinn</title>
+    <title>Lykilorða_gerillinn</title>
+    <!-- <link rel="stylesheet" href="css/style.css"></style> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
     <main>
-        <input type="text" id="str">
-        <!-- <p id="str"></p> -->
-        <button id="btn" onclick="generatePW()">Framleiða</button>
+        <div id="overlay"></div>
+        <div id="content">
+            <h1>PW://Lykilorða_Gerillinn</h1>
+            <div id="wrapper">
+                <input id="inp" type="text">
+                <button id="clear" class="btn fa fa-trash"></button>
+                <button id="gen" class="btn">Framleiða</button>
+            </div>
+        </div>
     </main>
 </body>
 </html>

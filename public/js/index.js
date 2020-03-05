@@ -1,24 +1,27 @@
 $(document).ready(() => {
-    $("#str").val(''); // Clears input at every load/reload
+    $(window).load(clearInp());
+    /*
+    How did jquery just stopped working!!?
+    */
 
-    $("#btn").click(() => {
-        // $.ajax({
-        //     type: "GET",
-        //     url: "http://localhost/getPW",
-        //     data: {},
-        //     dataType: "json",
-        //     // success: function (response) {
-                
-        //     // }
-        // }).done(((msg) => {
-        //     alert(msg);
-        // }));
-        $.get('/getPW', (data, status) => {
-            // console.log(data);
-            // alert(data);
-            $("#str").val(data);
-        })
+    $(".btn").click(() => {
+        console.log("That was a button!");
+    })
 
-        // $("#str").val("HI!!");
+    $("#clear").click(() => {
+        console.log("Hi");
+        clearInp();
     });
+
+    $("#gen").click(() => {
+        console.log("sup");
+        $.get('/getPW', (data, status) => {
+            $("#inp").val(data);
+        });
+    });
+
+    function clearInp() {
+        console.log("Only once");
+        $("#inp").val('');
+    }
 });

@@ -19,8 +19,8 @@ app.use(bodyParser.json())
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
+
 app.get('/getPW', (req, res) => {
-    // console.log("not here")
     MongoClient.connect(dbUri, {useUnifiedTopology: true}, (err, client) => {
         if (err) throw err;
         var db = client.db("Ord_db");
@@ -28,7 +28,6 @@ app.get('/getPW', (req, res) => {
         var rand = Math.random() * 1000;
         rand = Math.floor(rand);
         console.log(rand);
-        // var word = ord.find().limit(-1).skip(rand).next();
         ord.find({type: 'n'}, {" word": 1, _id: 0}).limit(1).skip(rand).toArray().then((rec, err) => {
             if (err) throw err;
             if (rec) {
@@ -37,11 +36,6 @@ app.get('/getPW', (req, res) => {
                 res.status(200).send(rec[0][" word"]);
             }
         });
-        
-        // client.close();
-        // console.log(word);
-        // console.log(req.method);
-        
     });
 });
 
