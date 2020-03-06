@@ -1,24 +1,31 @@
 $(document).ready(() => {
-    clearInp();
+    // clearInp();
+    $("#inp").val('');
 
-    $("#clear").click(() => {
-        console.log("Clear button");
-        clearInp();
+    $("#copy").click(() => {
+        console.log("Copy button");
+        $("#isCopied").css("visibility", "visible");
+        let copy = document.getElementById("inp");
+        copy.select();
+        copy.setSelectionRange(0, 99999);
+        document.execCommand("copy");
     });
 
     $("#gen").click(() => {
         console.log("Generate button");
         addLoading();
-        $.get('/getPW', (data, status) => {
+        $("#inp").val('');
+        $("#isCopied").css("visibility", "hidden");
+        $.get('/get', (data, status) => {
             remLoading();
             $("#inp").val(data);
         });
     });
 
-    function clearInp() {
-        console.log("Clear function");
-        $("#inp").val('');
-    }
+    // function clearInp() {
+    //     console.log("Clear function");
+    //     $("#inp").val('');
+    // }
 
     function addLoading() {
         console.log("Loading");
@@ -27,6 +34,6 @@ $(document).ready(() => {
 
     function remLoading() {
         console.log("Not loading");
-        $("#gen").html("Framleiða");
+        $("#gen").html("Framleiða aftur");
     }
 });

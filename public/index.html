@@ -5,6 +5,7 @@
     <title>Lykilorða_gerillinn</title>
     <link rel="stylesheet" href="css/style.css"></style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,11 +15,12 @@
     <main>
         <div id="overlay"></div>
         <div id="content">
-            <h1>PW://Lykilorða_Gerillinn</h1>
+            <h1>Lykilorða<br>Gerillinn</h1>
             <div id="wrapper">
                 <input id="inp" type="text">
-                <button id="clear" class="btn fa fa-trash"></button>
+                <button id="copy" class="btn"><span id="tooltip">Afrita</span></button>
                 <button id="gen" class="btn">Framleiða</button>
+                <p id="isCopied">Lykilorðið hefur verið afritað!</p>
             </div>
         </div>
     </main>
