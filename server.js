@@ -14,7 +14,7 @@ MongoClient.connect(dbUri, {useUnifiedTopology: true}, (err, client) => {
 });
 
 app.use(express.static("public"));
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
