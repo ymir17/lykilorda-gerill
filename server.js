@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
-const port = 3000;
 const MongoClient = require("mongodb").MongoClient;
 const dbUri = "mongodb+srv://ymirrp:Bjuga.109@ord-cluster-t5llt.azure.mongodb.net/test?retryWrites=true&w=majority";
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 MongoClient.connect(dbUri, {useUnifiedTopology: true}, (err, client) => {
     if (err) throw err;
