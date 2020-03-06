@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "keywords": [
+    "heroku"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ymir17/lykilorda-gerill.git"
@@ -19,7 +22,6 @@
   "homepage": "https://github.com/ymir17/lykilorda-gerill#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongodb": "^3.5.4",
-    "pymongo": "^3.5.1",
+    "mongodb": "^3.5.4"
   }
 }

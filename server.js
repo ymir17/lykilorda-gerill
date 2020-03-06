@@ -2,9 +2,6 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const MongoClient = require("mongodb").MongoClient;
-const bodyParser = require("body-parser");
-// const rand = require("Random")
-// const assert = require("assert");
 const dbUri = "mongodb+srv://ymirrp:Bjuga.109@ord-cluster-t5llt.azure.mongodb.net/test?retryWrites=true&w=majority";
 
 MongoClient.connect(dbUri, {useUnifiedTopology: true}, (err, client) => {
