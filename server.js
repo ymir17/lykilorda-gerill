@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const MongoClient = require("mongodb").MongoClient;
-const dbUri = "mongodb+srv://ymirrp:Bjuga.109@ord-cluster-t5llt.azure.mongodb.net/test?retryWrites=true&w=majority";
+const dbUri = "mongodb+srv://ymirrp:Bjuga.109@ord-cluster-t5llt.azure.mongodb.net/?retryWrites=true&w=majority";
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
